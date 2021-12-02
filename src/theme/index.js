@@ -26,6 +26,10 @@ const theme = createTheme({
             default: '#000',
             secondary: '#4CA148',
             grey: '#464646'
+        },
+        action: {
+            disabledBackground: '#222322',
+            disabled: '#686868'
         }
     },
     shape: {},
