@@ -49,7 +49,7 @@ const TOKENS = [
 const Votes = ({voteOptions, votedNo, classes}) => (
     <Grid container spacing={1} className={votedNo > 0 ? 'vote-finished' : ''}>
         {voteOptions.map(([totalSupply, voteCount], i) => (
-            <Grid item xs={12}>
+            <Grid item xs={12} key={`vote-option- ${i}`}>
                 <Box className={`${classes.voteOption} ${votedNo === i ? 'voted' : ''}`}>
                     <Box className={classes.vote}>
                         <Box className={classes.number}>
