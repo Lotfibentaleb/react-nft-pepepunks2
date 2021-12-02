@@ -1,12 +1,24 @@
-import {Box, Button, Container, Grid, Typography} from '@material-ui/core'
+import {Box, Button, Container, Grid, Link, Typography} from '@material-ui/core'
 
 import useStyles from './Banner.styles'
 
 const PARTNERS = [
-    ['Magic Eden', '/images/partners/magic-eden.png'],
-    ['NFTCALCULATOR', '/images/partners/nft-calculator.png'],
-    ['MoonRank', '/images/partners/moon-rank.png'],
-    ['EXCHANGE.ART', '/images/partners/exchange-art.png']
+    [
+        'Magic Eden',
+        '/images/partners/magic-eden.png',
+        'https://magiceden.io/marketplace/pepe_punks'
+    ],
+    [
+        'NFTCALCULATOR',
+        '/images/partners/nft-calculator.png',
+        'https://nftcalendar.io/event/pepepunks-are-coming-to-solana/'
+    ],
+    ['MoonRank', '/images/partners/moon-rank.png', 'https://moonrank.app/collection/pepe_punks'],
+    [
+        'EXCHANGE.ART',
+        '/images/partners/exchange-art.png',
+        'https://exchange.art/collections/Pepe%20Punks'
+    ]
 ]
 
 const Banner = () => {
@@ -67,10 +79,12 @@ const Banner = () => {
                     </Box>
                     <Box mt={2} paddingBottom={8}>
                         <Grid container spacing={2}>
-                            {PARTNERS.map(([title, image], i) => (
+                            {PARTNERS.map(([title, image, link], i) => (
                                 <Grid item xs={12} sm={6} md={3} key={`parnter-${i}`}>
                                     <Box textAlign="center">
-                                        <img src={image} alt={title} />
+                                        <Link href={link} target="_blank">
+                                            <img src={image} alt={title} />
+                                        </Link>
                                     </Box>
                                 </Grid>
                             ))}
