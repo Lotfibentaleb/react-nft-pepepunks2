@@ -18,15 +18,18 @@ const useStyles = makeStyles(theme => ({
         paddingLeft: 0,
         paddingRight: 0,
         justifyContent: 'center',
+        paddingTop: theme.spacing(0),
         height: theme.spacing(10),
         [theme.breakpoints.up('md')]: {
-            height: theme.spacing(21)
+            paddingTop: theme.spacing(2),
+            height: theme.spacing(18)
         },
         '&.small': {
             [theme.breakpoints.down('sm')]: {
                 height: theme.spacing(7)
             },
             [theme.breakpoints.up('md')]: {
+                paddingTop: theme.spacing(0),
                 height: theme.spacing(10)
             }
         }

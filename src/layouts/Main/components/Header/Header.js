@@ -10,14 +10,15 @@ import {
     Hidden,
     Button
 } from '@material-ui/core'
+import { HOME_URL } from 'config/constants'
 import useStyles from './Header.styles'
 
 import Logo from './Logo'
 
 const MENU_ITEMS = [
-    ['Home', '#'],
-    ['Roadmap', '#roadmap'],
-    ['Faq', '#faq']
+    ['Home', `${HOME_URL}/`],
+    ['Roadmap', `${HOME_URL}/#roadmap`],
+    ['Faq', `${HOME_URL}/#faq`]
 ]
 
 const Header = () => {

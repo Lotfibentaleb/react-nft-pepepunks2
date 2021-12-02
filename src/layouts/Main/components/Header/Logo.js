@@ -1,4 +1,5 @@
-import { Link as RouterLink } from 'react-router-dom'
+import { HOME_URL } from 'config/constants'
+import { Link } from '@material-ui/core'
 
 import useStyles from './Logo.styles'
 
@@ -6,9 +7,9 @@ const Logo = () => {
     const classes = useStyles()
 
     return (
-        <RouterLink to="/" className={classes.logoLink}>
+        <Link href={`${HOME_URL}/`} className={classes.logoLink}>
             <img className={classes.logoImage} src="/images/logo.png" alt="Pepepunks" />
-        </RouterLink>
+        </Link>
     )
 }
 
