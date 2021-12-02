@@ -63,7 +63,6 @@ const POSITIONS = ROADMAP_ITEMS.reduce((positions, [width, title, items]) => {
     [12]
 )
 
-console.log(POSITIONS)
 const Items = ({items, classes}) => (
     <Grid container spacing={2}>
         {items.map(([width, image, title, content, limitWidth], i) => (
